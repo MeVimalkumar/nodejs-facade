@@ -28,7 +28,7 @@ class Controller {
     }
 
     findByIdAndUpdate(req, res, next) {
-        this.Model.findByIdAndUpdate(req.params.id).then(doc => {
+        this.Model.findByIdAndUpdate(req.params.id, { $set: req.body }).then(doc => {
             res.status(204).send(doc);
         }).catch(error => {
             next(error);

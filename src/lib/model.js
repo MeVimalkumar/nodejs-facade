@@ -18,11 +18,11 @@ class Model {
     }
 
     findByIdAndUpdate(...args) {
-        return this.model.findByIdAndUpdate(...args).exec
+        return this.model.findByIdAndUpdate(...args).exec()
     }
 
     findByIdAndDelete(...args) {
-        return this.model.findByIdAndDelete(...args).exec
+        return this.model.findByIdAndDelete(...args).exec()
     }
 }
 
