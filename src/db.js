@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { bulkInsertUsers } = require('./migration/migration.scripts');
 const options = { useNewUrlParser: true, useUnifiedTopology: true };
 
 function dbConnection() {
@@ -11,6 +12,7 @@ function dbConnection() {
     });
     db.on("open", () => {
         console.log("connection established");
+        bulkInsertUsers();
     });
 }
 
