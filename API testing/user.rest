@@ -1,0 +1,24 @@
+POST http://localhost:3000/api/user
+content-type: application/json
+
+{
+    "name":"XYZ ABC",
+    "email":"xyz@abc.com"
+}
+###
+
+GET http://localhost:3000/api/user
+###
+GET http://localhost:3000/api/user/5ee135a3783e4a52b3166582
+###
+
+PUT http://localhost:3000/api/user/5ee135a3783e4a52b3166582
+content-type: application/json
+
+{
+    "name":"User Updated"
+}
+###
+
+DELETE http://localhost:3000/api/user/5ee135cfe6e6be534fd3dd4c
+
